@@ -1,0 +1,39 @@
+on:
+  workflow_dispatch: # avvio manuale
+  #schedule:
+    #- cron: '30 4 * * *' # ogni giorno alle 4.30 UTC (6.30 nostre d'estate e 5.30 d'inverno)
+
+jobs:
+  lavoro1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Repository
+        uses: actions/checkout@v4
+
+      - name: Setup di Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Setup di Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Aggiorna pip
+        run: pip install --upgrade pip
+        
+      - name: Installa librerie
+        run: pip install certifi google-api-python-client google-auth urllib3 google-auth-httplib2 httplib2 google-auth-oauthlib webdriver-manager==4.0.1 mailtrap==2.0.1 selenium==4.22.0
+  
+      - name: Avvia script
+        env:
+          TG_TOK: ${{ secrets.TG_TOK }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          
+        run: |
+          python main.py
+            
+          done
