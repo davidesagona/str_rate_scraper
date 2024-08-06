@@ -31,8 +31,8 @@ class Cerca:
             chrome_options.add_argument(option)
 
         driver = webdriver.Chrome(
-        service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),
-        options=chrome_options
+            service=ChromiumService(ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()),
+            options=chrome_options
         )
 
         driver.implicitly_wait(6)
