@@ -35,5 +35,4 @@ jobs:
           
         run: |
           python main.py
-            
-          done
+        done
