@@ -26,7 +26,7 @@ jobs:
         run: pip install --upgrade pip
         
       - name: Installa librerie
-        run: pip install certifi google-api-python-client google-auth urllib3 google-auth-httplib2 httplib2 google-auth-oauthlib webdriver-manager==4.0.1 mailtrap==2.0.1 selenium==4.22.0
+        run: pip install certifi telepot webdriver-manager==4.0.1 selenium==4.22.0
   
       - name: Avvia script
         env:
