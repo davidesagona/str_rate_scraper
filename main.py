@@ -7,6 +7,7 @@ from webdriver_manager.core.os_manager import ChromeType
 #from datetime import datetime, timezone, timedelta
 #import time
 import telepot
+import os
 
 TG_TOK = os.getenv('TG_TOK')
 CHAT_ID = os.getenv('CHAT_ID')
