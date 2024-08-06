@@ -11,7 +11,7 @@ import os
 
 TG_TOK = os.getenv('TG_TOK')
 CHAT_ID = os.getenv('CHAT_ID')
-
+print(CHAT_ID)
 class Cerca:
     tasso = None
 
