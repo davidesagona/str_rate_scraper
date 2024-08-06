@@ -26,7 +26,7 @@ class Cerca:
             "--disable-extensions",
             "--no-sandbox",
             "--disable-dev-shm-usage"
-            ]
+        ]
         for option in options:
             chrome_options.add_argument(option)
 
