@@ -27,7 +27,10 @@ jobs:
         
       - name: Installa librerie
         run: pip install certifi telepot webdriver-manager==4.0.1 selenium==4.22.0
-  
+
+      - name: Aggiungi permessi di esecuzione a chromedriver
+        run: chmod +x $(which chromedriver)
+      
       - name: Avvia script
         env:
           TG_TOK: ${{ secrets.TG_TOK }}
