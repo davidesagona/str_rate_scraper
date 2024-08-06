@@ -45,7 +45,7 @@ class Cerca:
     def manda_mess(self):
         if self.tasso is not None:
             bot = telepot.Bot(TG_TOK)
-            messaggio = 'Tasso <a href="https://www.justetf.com/it/etf-profile.html?isin=LU0290358497#panoramica">XEON</a> di oggi: ' + str(self.tasso)
+            messaggio = 'Tasso <a href="https://www.justetf.com/it/etf-profile.html?isin=LU0290358497#panoramica">XEON</a> di oggi: ' + str(self.tasso) + "\n" + '<a href="https://www.ecb.europa.eu/stats/financial_markets_and_interest_rates/euro_short-term_rate/html/index.en.html">fonte</a>'
             bot.sendMessage(CHAT_ID, messaggio, parse_mode='HTML')
         else:
             print("Tasso is None, cannot send message.")
