@@ -26,7 +26,7 @@ jobs:
         run: pip install --upgrade pip
         
       - name: Installa librerie
-        run: pip install certifi telepot webdriver-manager==4.0.1 selenium==4.22.0
+        run: pip install certifi telepot webdriver-manager==4.0.2 selenium==4.22.0
       
       - name: Avvia script
         env:
@@ -34,9 +34,6 @@ jobs:
           CHAT_ID: ${{ secrets.CHAT_ID }}
           
         run: |
-          rm -rf /home/user/.wdm
-          pip uninstall webdriver-manager
-          pip install webdriver-manager==4.0.1
           python main.py
             
           done
