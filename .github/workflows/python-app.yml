@@ -32,6 +32,4 @@ jobs:
         env:
           TG_TOK: ${{ secrets.TG_TOK }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
-          
-      - name: avvia
-        run: python main.py
+          run: python main.py
