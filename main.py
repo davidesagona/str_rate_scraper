@@ -11,7 +11,7 @@ import os
 
 TG_TOK = os.getenv('TG_TOK')
 CHAT_ID = os.getenv('CHAT_ID')
-print(CHAT_ID)
+
 class Cerca:
     tasso = None
 
@@ -46,7 +46,6 @@ class Cerca:
         if self.tasso is not None:
             bot = telepot.Bot(TG_TOK)
             messaggio = 'Tasso <a href="https://www.justetf.com/it/etf-profile.html?isin=LU0290358497#panoramica">XEON</a> di oggi: ' + str(self.tasso)
-            CHAT_ID = '@ggrvtbtvt'
             bot.sendMessage(CHAT_ID, messaggio, parse_mode='HTML')
         else:
             print("Tasso is None, cannot send message.")
